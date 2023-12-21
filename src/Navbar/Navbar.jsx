@@ -35,7 +35,7 @@ const Navbar = () => {
     </>
   );
   return (
-    <div className="navbar max-w-screen-xl mx-auto items-center bg-base-100">
+    <div className="navbar max-w-screen-xl mx-auto items-center ">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -56,7 +56,7 @@ const Navbar = () => {
           </label>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content mt-3  p-2 shadow bg-black rounded-box w-52"
+            className="menu menu-sm dropdown-content mt-3 text-white  p-2 shadow bg-black rounded-box w-52"
             style={{
               position: "absolute",
               top: "50%",

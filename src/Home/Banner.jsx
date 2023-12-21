@@ -5,7 +5,7 @@ import { AuthContext } from "../Provider/AuthProvider";
 const Banner = () => {
   const { user } = useContext(AuthContext);
   return (
-    <div className="max-w-screen-xl mx-auto h-[70vh]">
+    <div className="max-w-screen-xl  mx-auto h-[70vh]">
       <div
         className="hero min-h-[80vh] relative"
         style={{

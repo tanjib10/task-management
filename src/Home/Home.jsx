@@ -1,3 +1,4 @@
+import Audience from "../Audience/Audience";
 import Navbar from "../Navbar/Navbar";
 import Banner from "./Banner";
 
@@ -6,6 +7,7 @@ const Home = () => {
     <div>
       <Navbar></Navbar>
       <Banner></Banner>
+      <Audience></Audience>
     </div>
   );
 };
