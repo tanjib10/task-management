@@ -1,9 +1,10 @@
 import { useContext } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
 import Swal from "sweetalert2";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
+  const navigate = useNavigate();
   const { user, logOut } = useContext(AuthContext);
   const handleSignOut = () => {
     logOut()
@@ -13,22 +14,23 @@ const Navbar = () => {
           title: "Logged Out",
           text: "You have been successfully logged out!",
         });
+        navigate("/");
       })
       .catch();
   };
   const navLinks = (
     <>
-      <li className="mr-2">
+      <li className="mr-2 text-lg">
         <NavLink to="/">Home</NavLink>
       </li>
-      <li className="mr-2">
-        <NavLink to="/dashboard">Dashboard</NavLink>
+      <li className="mr-2 text-lg">
+        <NavLink to="/tasks">Manage Tasks</NavLink>
       </li>
 
       {user ? (
         ""
       ) : (
-        <li className="mr-2">
+        <li className=" text-lg">
           <NavLink to="/register">Register Now</NavLink>
         </li>
       )}

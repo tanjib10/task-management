@@ -5,9 +5,9 @@ import { AuthContext } from "../Provider/AuthProvider";
 const Banner = () => {
   const { user } = useContext(AuthContext);
   return (
-    <div className="max-w-screen-xl  mx-auto h-[70vh]">
+    <div className="max-w-screen-xl  mx-auto h-[100vh]">
       <div
-        className="hero min-h-[80vh] relative"
+        className="hero min-h-[100vh] relative"
         style={{
           backgroundImage:
             "url(https://i.ibb.co/4F7jShK/glenn-carstens-peters-RLw-UC03-Gwc-unsplash.jpg)",

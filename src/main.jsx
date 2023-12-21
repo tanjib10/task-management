@@ -8,6 +8,8 @@ import Home from "./Home/Home";
 import AuthProvider from "./Provider/AuthProvider";
 import Register from "./Register/Register";
 import Login from "./Login/Login";
+// import Dashboard from "./Dashboard/Dashboard";
+import ManageTasks from "./ManageTasks/ManageTasks";
 
 const router = createBrowserRouter([
   {
@@ -26,6 +28,10 @@ const router = createBrowserRouter([
       {
         path: "/login",
         element: <Login></Login>,
+      },
+      {
+        path: "/tasks",
+        element: <ManageTasks></ManageTasks>,
       },
     ],
   },
