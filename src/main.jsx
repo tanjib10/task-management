@@ -47,7 +47,7 @@ const router = createBrowserRouter([
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <div className="max-w-screen-xl mx-auto bg-[#EEE7DA] w-screen h-screen">
+  <div className="max-w-screen-xl mx-auto bg-[#EEE7DA]">
     <DndProvider backend={HTML5Backend}>
       <React.StrictMode>
         <AuthProvider>
