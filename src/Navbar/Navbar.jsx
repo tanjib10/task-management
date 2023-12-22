@@ -6,6 +6,7 @@ import { Link, NavLink, useNavigate } from "react-router-dom";
 const Navbar = () => {
   const navigate = useNavigate();
   const { user, logOut } = useContext(AuthContext);
+  console.log(user);
   const handleSignOut = () => {
     logOut()
       .then(() => {
@@ -79,15 +80,6 @@ const Navbar = () => {
         <ul className="menu menu-horizontal px-1">{navLinks}</ul>
       </div>
       <div className="navbar-end">
-        {user ? (
-          <div className="flex items-center justify-center gap-2">
-            <p className="text-black">{user.displayName}</p>
-            <img className="w-8" src={user.photoURL} alt="" />
-          </div>
-        ) : (
-          ""
-        )}
-
         {user ? (
           <button
             onClick={handleSignOut}
