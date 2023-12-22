@@ -1,10 +1,11 @@
 import { useContext, useState } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
 import Swal from "sweetalert2";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 /* eslint-disable no-unused-vars */
 const Register = () => {
+  const navigate = useNavigate();
   const { createUser } = useContext(AuthContext);
   const [passwordError, setPasswordError] = useState("");
   const handleRegister = (e) => {
@@ -33,6 +34,7 @@ const Register = () => {
           title: "Registration Successful",
           text: "You have been successfully registered!",
         });
+        navigate("/");
       })
       .catch((error) => {
         console.log(error);
