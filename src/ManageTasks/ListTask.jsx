@@ -19,7 +19,7 @@ const ListTask = ({ tasks, setTasks }) => {
   console.log(tasks);
   const statuses = ["todo", "ongoing", "completed"];
   return (
-    <div className="flex gap-16 ">
+    <div className="flex flex-col lg:flex-row  gap-16 ">
       {statuses.map((status, index) => (
         <Section
           key={index}
