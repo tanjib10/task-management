@@ -21,7 +21,7 @@ const Banner = () => {
             Your <br /> Task Management Platform
           </h3>
           <br />
-          <Link to={user ? "/dashboard" : "/login"}>
+          <Link to={user ? "/tasks" : "/login"}>
             <button className="btn bg-[#9C0063] text-white opacity-100">
               Explore Now
             </button>

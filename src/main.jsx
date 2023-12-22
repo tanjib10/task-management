@@ -9,11 +9,12 @@ import AuthProvider from "./Provider/AuthProvider";
 import Register from "./Register/Register";
 import Login from "./Login/Login";
 // import Dashboard from "./Dashboard/Dashboard";
-import ManageTasks from "./ManageTasks/ManageTasks";
+// import ManageTasks from "./ManageTasks/ManageTasks";
 import PrivateRoute from "./PrivateRoute/PrivateRoute";
-import TaskManagementDashboard from "./ManageTasks/TaskManagementDashboard";
+// import TaskManagementDashboard from "./ManageTasks/TaskManagementDashboard";
 import { DndProvider } from "react-dnd";
 import { HTML5Backend } from "react-dnd-html5-backend";
+import ManageTasks from "./ManageTasks/ManageTasks";
 
 const router = createBrowserRouter([
   {
@@ -41,20 +42,12 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
       },
-      {
-        path: "/manageTasks",
-        element: (
-          <PrivateRoute>
-            <TaskManagementDashboard></TaskManagementDashboard>
-          </PrivateRoute>
-        ),
-      },
     ],
   },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <div className="max-w-screen-xl mx-auto bg-[#EEE7DA]">
+  <div className="max-w-screen-xl mx-auto bg-[#EEE7DA] w-screen h-screen">
     <DndProvider backend={HTML5Backend}>
       <React.StrictMode>
         <AuthProvider>
